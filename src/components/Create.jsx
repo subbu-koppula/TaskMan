@@ -1,5 +1,5 @@
 import React from "react";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 
 const Create = ({ Tasks, setTasks, handleCreate }) => {
   const title = useRef();
@@ -30,7 +30,7 @@ const Create = ({ Tasks, setTasks, handleCreate }) => {
         <form className="mt-4" onSubmit={handleSave}>
 
         <menu className="flex items-center justify-end gap-4 my-4">
-          <button className="text-stone-800 hover:text-stone-950">
+          <button onClick={handleCreate} className="text-stone-800 hover:text-stone-950">
             Cancel
           </button>
           <button type="submit" className="px-6 py-2 rounded-md bg-stone-800 text-stone-50 hover:bg-stone-950">
@@ -39,7 +39,7 @@ const Create = ({ Tasks, setTasks, handleCreate }) => {
         </menu>
         <p className="flex flex-col gap-1 my-4">
           <label
-            for="title"
+            htmlFor="title"
             className="text-sm font-bold uppercase text-stone-500"
             >
             Title
@@ -53,7 +53,7 @@ const Create = ({ Tasks, setTasks, handleCreate }) => {
         </p>
         <p className="flex flex-col gap-1 my-4">
           <label
-            for="desc"
+            htmlFor="desc"
             className="text-sm font-bold uppercase text-stone-500"
             >
             Description
@@ -67,7 +67,7 @@ const Create = ({ Tasks, setTasks, handleCreate }) => {
         </p>
         <p className="flex flex-col gap-1 my-4">
           <label
-            for="dueDate"
+            htmlFor="dueDate"
             className="text-sm font-bold uppercase text-stone-500"
             >
             Due Date
