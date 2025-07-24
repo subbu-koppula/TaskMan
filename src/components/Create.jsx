@@ -70,7 +70,7 @@ const Create = ({ Tasks, setTasks, handleCreate }) => {
             htmlFor="dueDate"
             className="text-sm font-bold uppercase text-stone-500"
             >
-            Due Date
+            Due Date(Optional)
           </label>
           <input
             ref={due}
